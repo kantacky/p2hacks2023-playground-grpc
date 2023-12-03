@@ -4,7 +4,7 @@
 
 generate-proto:
 	@rm -rf ./pkg
-	@protoc --go_out=. ./proto/playground.proto
+	@protoc --go_out=. --go-grpc_out=. ./proto/playground.proto
 	@go mod tidy
 
 install:
