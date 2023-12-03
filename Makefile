@@ -5,6 +5,7 @@
 generate-proto:
 	@rm -rf ./pkg
 	@protoc --go_out=. ./proto/playground.proto
+	@go mod tidy
 
 install:
 	@go install github.com/golang/protobuf/protoc-gen-go@latest
