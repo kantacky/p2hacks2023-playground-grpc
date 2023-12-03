@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package playground;
+
+option go_package = "pkg/playground";
+
+service Playground {
+    rpc Echo(EchoRequest) returns (EchoResponse) {}
+}
+
+message EchoRequest {
+    string message = 1;
+}
+
+message EchoResponse {
+    string message = 1;
+}
